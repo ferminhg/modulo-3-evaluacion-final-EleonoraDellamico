@@ -1,4 +1,4 @@
-const getDataFromAPi = () => {
+const getDataFromApi = () => {
   //console.log("obteniendo datos...");
   return fetch("https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json")
     .then(response => response.json())
@@ -10,4 +10,4 @@ const getDataFromAPi = () => {
     });
 };
 
-export default { getDataFromAPi: getDataFromAPi }
+export default { getDataFromApi: getDataFromApi }
