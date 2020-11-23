@@ -1,6 +1,16 @@
 import '../App.scss';
+import api from "../services/api";
 
-function App() {
+
+api.getDataFromAPi().then(data => {
+  console.log(data);
+});
+
+
+
+
+
+const App = () => {
   return (
     <div className="App">
       <h1>Funciona</h1>
