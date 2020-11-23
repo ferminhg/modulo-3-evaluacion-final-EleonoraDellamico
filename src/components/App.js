@@ -21,18 +21,24 @@ const App = () => {
   }, []);
 
   //EVENTO INPUT PASA POR LIFTING
-  const handleFilter = (ev) => {
+  const handleFilter = textInput => {
+    setTextInput(textInput);
+  }
+  /* const handleFilter = (ev) => {
     setTextInput(ev);
     console.log("Estoy Aqui");
-  };
+  }; */
+  // EVENTO FILTERS
 
-
+  const filtered = character.filter((character) => {
+    return character.name.toUpperCase().includes(textInput.toUpperCase());
+  });
 
   return (
     <div className="App">
       <h1>Funciona ._.</h1>
       <Filters handleFilter={handleFilter} />
-      <CharacterList character={character} />
+      <CharacterList character={filtered} />
     </div>
   );
 }
