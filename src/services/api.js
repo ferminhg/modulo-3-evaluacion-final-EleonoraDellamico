@@ -5,7 +5,7 @@ const getDataFromAPi = () => {
     .then(data => {
       //console.log(data);
       //console.log("ya tengo los datos");
-      return data;
+      return data.results;
 
     });
 };
