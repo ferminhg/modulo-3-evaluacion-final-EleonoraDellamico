@@ -5,6 +5,7 @@ import api from "../services/api";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import "../Rick_and_Morty_logo.png";
 
 
 
@@ -27,7 +28,8 @@ const App = () => {
   //EVENTO INPUT PASA POR LIFTING
   const handleFilter = textInput => {
     setTextInput(textInput);
-  }
+  };
+
 
   // EVENTO FILTERS
 
@@ -35,7 +37,9 @@ const App = () => {
     return character.name.toUpperCase().includes(textInput.toUpperCase());
   });
 
-  //EVENTO SWITCH
+
+
+  //EVENTO SWITCH TARJETA DETALLES
 
   const renderDetail = props => {
     const routeCharacterId = parseInt(props.match.params.characterId);
@@ -47,7 +51,7 @@ const App = () => {
       }
     });
     if (foundCharacter !== undefined) {
-      //console.log(foundCharacter);
+      console.log("soy FoundCharacter", foundCharacter);
       return <CharacterDetail
         image={foundCharacter.image}
         name={foundCharacter.name}
@@ -55,8 +59,6 @@ const App = () => {
         origin={foundCharacter.origin}
         episode={foundCharacter.episode}
         status={foundCharacter.status} />;
-    } else {
-      return <p>character no encotrado</p>
     }
 
   };
@@ -66,9 +68,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <Filters handleFilter={handleFilter} />
+      {/*  <img alt="Ricky and Morty" src="../Rick_and_Morty_logo.png" /> */}
+
       <Switch>
-        <Route exact path="/"><CharacterList character={filtered} />
+        <Route exact path="/">
+          <Filters handleFilter={handleFilter} textInput={textInput} />
+          <CharacterList character={filtered} />
         </Route>
         <Route path="/character-detail/:characterId" render={renderDetail} />
       </Switch>
