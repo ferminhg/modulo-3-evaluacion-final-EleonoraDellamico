@@ -4,8 +4,12 @@ const Filters = (props) => {
     //console.log(ev.target.value);
     props.handleFilter(ev.target.value);
   };
+
+  const handleFormSubmit = (ev) => {
+    ev.preventDefault();
+  }
   return (
-    <form>
+    <form onSubmit={handleFormSubmit}>
       <label htmlFor="name">Buscar por nombre</label>
       <input type="text" id="name" onChange={handleFilter} />
     </form>
