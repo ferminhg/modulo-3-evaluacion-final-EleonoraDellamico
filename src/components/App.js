@@ -5,7 +5,8 @@ import api from "../services/api";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-import "../Rick_and_Morty_logo.png";
+/* import logo from "../images/Logo_Rick_and_Morty"; */
+
 
 
 
@@ -68,7 +69,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {/*  <img alt="Ricky and Morty" src="../Rick_and_Morty_logo.png" /> */}
+      {/*  <img alt="Ricky and Morty" src={logo} /> */}
 
       <Switch>
         <Route exact path="/">

@@ -9,8 +9,8 @@ const Filters = (props) => {
     ev.preventDefault();
   }
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label htmlFor="name">Buscar por nombre</label>
+    <form className="form" onSubmit={handleFormSubmit}>
+      <label className="character_title label" htmlFor="name">Buscar por nombre</label>
       <input value={props.textInput} type="text" id="name" onChange={handleFilter} />
     </form>
   );

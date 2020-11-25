@@ -1,9 +1,67 @@
-.App {
-  text-align: center;
-  background-color: white;
-  color: black;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+.App {
+  text-align: left;
+  background-color: black;
+  color: #a6eee6ff;
+  /*  text-shadow: 0 0 0.2em #77fff2, 0 0 0.2em #77fff2; */
+}
+.form {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.article {
+  margin-top: 30px;
+}
+
+.character_title {
+  color: #a6eee6ff;
+  /*  text-shadow: 0 0 0.2em #77fff2, 0 0 0.2em #77fff2; */
+  font-family: "Shadows Into Light", cursive;
+  font-size: 25px;
+}
+li {
+  list-style: none;
+  font-family: "Shadows Into Light", cursive;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.imgDetail {
+  height: 200px;
+  width: 200px;
+  margin-top: 50px;
+}
+.divInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 55px;
+}
+.detailVolver {
+  margin-left: 150px;
+  margin-top: 50px;
+  height: 30px;
+  color: black;
+  background-color: #fae48bff;
+  width: 60px;
+  border-radius: 20%;
+}
+.characterCard_photo {
+  height: 200px;
+  width: auto;
+}
+.detailCard {
+  word-spacing: 7px;
+  font-family: "Shadows Into Light", cursive;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
