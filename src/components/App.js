@@ -5,7 +5,7 @@ import api from "../services/api";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-/* import logo from "../images/Logo_Rick_and_Morty"; */
+import logo from "../images/LogoRickMorty.png"; 
 
 
 
@@ -69,10 +69,10 @@ const App = () => {
 
   return (
     <div className="App">
-      {/*  <img alt="Ricky and Morty" src={logo} /> */}
 
       <Switch>
         <Route exact path="/">
+        <img className="img_home"alt="Ricky and Morty" src={logo} /> 
           <Filters handleFilter={handleFilter} textInput={textInput} />
           <CharacterList character={filtered} />
         </Route>
