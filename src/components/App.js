@@ -11,6 +11,7 @@ import logo from "../images/LogoRickMorty.png";
 
 
 
+
 const App = () => {
   //ESTADO ARRAY
   const [character, setCharacter] = useState([]);
@@ -74,7 +75,7 @@ const App = () => {
         <Route exact path="/">
         <img className="img_home"alt="Ricky and Morty" src={logo} /> 
           <Filters handleFilter={handleFilter} textInput={textInput} />
-          <CharacterList character={filtered} />
+          <CharacterList character={filtered}/>
         </Route>
         <Route path="/character-detail/:characterId" render={renderDetail} />
       </Switch>

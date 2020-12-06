@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import gif from "../images/gifError.gif"
 
 const CharacterList = (props) => {
   const character = props.character.map(card => (
@@ -7,7 +8,7 @@ const CharacterList = (props) => {
     </li>
 
   ));
-  return props.character.length > 0 ? (<ul>{character} {props.handleFilter}</ul>) : <p>No hay ningún personaje que coincida con la palabra {props.setTextInput}</p>;
+  return props.character.length > 0 ? (<ul>{character} {props.handleFilter}</ul>) : <div className="gif"><p>Error we cant find the character! </p>  <img className="gif_error" alt="gif rick and morty" src={gif}/></div>;
 };
 
 
