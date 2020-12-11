@@ -16,6 +16,7 @@ body {
 .character_input{
   border-radius: 15px;
   border-color: aquamarine;
+  width: 110px;
 }
 .form {
   display: flex;
@@ -31,21 +32,32 @@ ul{
 }
 .characterCard_photo{
   width: 120px;
+  border: 3px solid yellow;
 }
 .article {
   margin-top: 30px;
+  border: 3px solid green;
   background: linear-gradient(70deg, #a6eee6ff, white);
-
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-
   width: 180px;
   padding-right: 20px;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+ -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+.article:hover{
+  width: 200px;
+  height: 230px;
+  background:#a6eee6ff;
+  align-items: center;
+ 
 }
 
 .character_title {
@@ -55,7 +67,7 @@ ul{
   font-weight: 600;
 }
 .label{
-  margin-right: 30px;
+  margin-right: 10px;
   color: #a6eee6ff;
 }
 li {
