@@ -13,10 +13,13 @@ const CharacterDetail = (props) => {
         <h3 className="characterDetail detailOrigin">Origin: {props.origin.name}</h3>
         <h3 className="characterDetail detailEpisode">Episode: {props.episode.length}</h3>
         <h3 className="characterDetail detailSatuts">Status: {props.status}</h3>
+        </div>
+        <div className= "characterDetail_button">
         <Link  className="characterLink" title="character" to="/">
            <button className="characterDetail_ home" title="volver">Home</button>
           </Link>
-    </div>
+          </div>
+    
     </div>
   </form>
 }
