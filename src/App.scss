@@ -99,7 +99,7 @@ li {
   flex-direction: column;
   align-self: center;
   height: fit-content;
-  width: fit-content;
+  width: 175px;
   background: linear-gradient(70deg, #ccabdb, white);
   padding: 5px 5px 5px 5px;
   border: 3px solid #ccabdb;
@@ -109,7 +109,6 @@ li {
 .characterDetail{
   color: black;
   font-family: "Shadows Into Light", cursive;
-  letter-spacing: 2px;
   font-size: 16px;
   font-weight: bolder;
   height: 45px;
@@ -127,7 +126,7 @@ li {
   }
   
 .characterDetail_imgDetail {
-height: 177px;
+height: 175px;
 border: 3px solid #ccabdb;
 }
 
@@ -188,6 +187,31 @@ p{
     width: 200px;
   }
 .label{
+  font-size: 20px;
+}
+.characterDetail_container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.characterDetail_imgDetail{
+  height: 241px;
+  width: auto;
+}
+.characterDetail_containerInfo{
+  width: fit-content;
+}
+.home{
+  margin-left: 10px;
+}
+.characterDetail{
+  letter-spacing: 2px;
+}
+.gif_error{
+  width: 650px;
+}
+.p{
   font-size: 20px;
 }
 }
