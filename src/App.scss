@@ -26,12 +26,19 @@
   100% { transform: rotate(360deg); }
 }
 //STYLE HOME PAGE
+.home__container--img{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 body {
-  
-  background-color: black;
+  background-image: url("https://images.alphacoders.com/633/thumb-1920-633234.jpg");  
 }
 .img_home{
-  width: 100vw;
+ 
+ width: 400px;
   height: auto;
 }
  //ESTILOS INPUT
@@ -55,12 +62,12 @@ ul{
 }
 .characterCard_photo{
   width: 120px;
-  border: 3px solid yellow;
+  border: 3px solid  #a6eee6ff;
 }
 .article {
   margin-top: 30px;
   border: 4px solid #a6eee6ff;
-  background: linear-gradient(70deg, rgb(15, 26, 111), rgb(108, 115, 209));
+  background: linear-gradient(70deg, #349081, rgb(204, 250, 98));
   padding-top: 20px;
   padding-bottom: 20px;
   width: 174px;
@@ -76,7 +83,7 @@ ul{
 }
 .article:hover{
   transform: scale(1.2);
-  background:black;
+  background:#349081;
   z-index: 10;
  
  

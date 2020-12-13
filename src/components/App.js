@@ -7,6 +7,7 @@ import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import logo from "../images/LogoRickMorty.png"; 
 import Loading from "./Loading";
+import gitTitle from "../images/gitTitle.gif";
 
 
 
@@ -79,7 +80,9 @@ const App = () => {
        {isLoading === true ? <Loading/> : null}
       <Switch>
         <Route exact path="/">
-        <img className="img_home"alt="Ricky and Morty" src={logo} /> 
+          <div className="home__container--img">
+        <img className="img_home"alt="Ricky and Morty" src={gitTitle} /> 
+        </div>
           <Filters handleFilter={handleFilter} textInput={textInput} />
           <CharacterList character={filtered}/>
         </Route>
