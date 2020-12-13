@@ -6,6 +6,7 @@ import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import logo from "../images/LogoRickMorty.png"; 
+import Loading from "./Loading";
 
 
 
@@ -17,13 +18,17 @@ const App = () => {
   const [character, setCharacter] = useState([]);
   //ESTADO INPUT
   const [textInput, setTextInput] = useState("");
+  //ESTADo LOADING
+  const[isLoading, setIsLoading] = useState("true");
 
   //DATA FROM API
   useEffect(() => {
+    setIsLoading(true);
     //console.log("me monto")
     api.getDataFromApi().then(data => {
       //console.log(data);
       setCharacter(data);
+      setIsLoading(false);
     });
   }, []);
 
@@ -69,8 +74,9 @@ const App = () => {
 
 
   return (
+   
     <div className="App">
-
+       {isLoading === true ? <Loading/> : null}
       <Switch>
         <Route exact path="/">
         <img className="img_home"alt="Ricky and Morty" src={logo} /> 

@@ -3,6 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+.loading{
+  border-top: 16px solid rgb(12, 12, 12);
+  border-bottom: 16px solid rgb(13, 13, 14);
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(10, 10, 10);
+  border-bottom: 16px solid rgb(0, 0, 0);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 //STYLE HOME PAGE
 body {
   
@@ -29,6 +51,7 @@ ul{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 .characterCard_photo{
   width: 120px;
@@ -36,34 +59,33 @@ ul{
 }
 .article {
   margin-top: 30px;
-  border: 3px solid green;
-  background: linear-gradient(70deg, #a6eee6ff, white);
-  padding-left: 20px;
+  border: 4px solid #a6eee6ff;
+  background: linear-gradient(70deg, rgb(15, 26, 111), rgb(108, 115, 209));
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 180px;
-  padding-right: 20px;
+  width: 174px;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   cursor: pointer;
  -moz-transition: background-color 1s ease-out;
   -o-transition: background-color 1s ease-out;
   transition: background-color 1s ease-out;
 }
 .article:hover{
-  width: 200px;
-  height: 230px;
-  background:#a6eee6ff;
-  align-items: center;
+  transform: scale(1.2);
+  background:black;
+  z-index: 10;
+ 
  
 }
 
 .character_title {
-  color: black;
+  color: white;
   font-family: "Shadows Into Light", cursive;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 .label{
@@ -83,7 +105,7 @@ li {
   flex-direction: column;
   justify-content: center;
   padding: 5px 5px 5px 5px;
-  background-image: url("https://i1.wp.com/hipersonica.com/wp-content/uploads/2020/05/Rick-Morty.jpg?fit=1280%2C720&ssl=1");
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/364/740/974/rick-and-morty-orange-space-planet-blue-hd-wallpaper-preview.jpg");
   height: 100vh;
   width: auto;
   background-position: center;
@@ -98,16 +120,18 @@ li {
   display: flex;
   flex-direction: column;
   align-self: center;
-  height: fit-content;
+  height: 241px;
   width: 200px;
-  background: linear-gradient(70deg, #ccabdb, white);
+  background: linear-gradient(70deg, rgb(15, 26, 111), rgb(108, 115, 209));
   padding: 5px 5px 5px 5px;
-  border: 3px solid #ccabdb;
+  border: 3px solid rgb(15, 26, 111);
+  box-shadow: 10px 5px 5px #0f1a6f;
+  border-top: none;
   
 }
 
 .characterDetail{
-  color: black;
+  color: white;
   font-family: "Shadows Into Light", cursive;
   font-size: 16px;
   font-weight: bolder;
@@ -127,29 +151,31 @@ li {
   
 .characterDetail_imgDetail {
 width: 200px;
-border: 3px solid #ccabdb;
+border: 3px solid rgb(15, 26, 111);
 height: 188px;
+box-shadow: 10px 5px 5px rgb(15, 26, 111);
+border-bottom: none;
 }
 
 //BUTTON BACK TO HOMEPAGE
 .home{
     height: 50px;
     width: 80px;
-    color: black;
+    color: white;
     font-family: "Shadows Into Light", cursive;
     letter-spacing: 2px;
     font-weight: bolder;
     font-size: 16px;
-    background: linear-gradient(70deg, #ccabdb, white);
+    background: linear-gradient(70deg, rgb(15, 26, 111), rgb(108, 115, 209));
     border-radius: 20%;
     margin-top: 15px;
     cursor: pointer;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
+    transition: 2s ease-out;
+    box-shadow: 10px 5px 5px #0f1a6f;
+  
    }
 .home:hover{
-  background:#a6eee6ff;
+  background:rgb(15, 26, 111);
 }
 p{
   color:red;
@@ -199,9 +225,11 @@ p{
 .characterDetail_imgDetail{
   height: 241px;
   width: auto;
+  border-bottom: 3px solid rgb(15, 26, 111);
 }
 .characterDetail_containerInfo{
   width: fit-content;
+  border-top: 3px solid rgb(15, 26, 111);
 }
 .home{
   margin-left: 10px;
